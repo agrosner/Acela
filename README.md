@@ -47,12 +47,6 @@ Add the library to the project-level build.gradle, and use the [apt plugin](http
 
 ## Changelog
 
-### 2.0.0
-1. Massive changes to the library. Now is a single java project backed by Jackson Stream API.
-2. No longer does it support swapping in different parsers, however the speed and consistency improvements more than make up for it.
-3. Full JSON serialization support.
-4. More changes, but main annotation API remains the same.
-
 ## Usage Docs
 
 For more detailed usage, check out these sections:
