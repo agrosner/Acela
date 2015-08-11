@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+targetCompatibility = JavaVersion.VERSION_1_7
+sourceCompatibility = JavaVersion.VERSION_1_7
+
+
+dependencies {
+    compile 'com.fasterxml.jackson.core:jackson-core:2.5.1'
+    compile 'com.squareup:javapoet:1.1.0'
+    compile 'com.google.auto.service:auto-service:1.0+'
+
+    testCompile 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:1.9.5"
+}
