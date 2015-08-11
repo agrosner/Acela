@@ -73,9 +73,9 @@ Call the `Translator` class to perform most operations:
 ```java
 
 // we support String, byte[], File, InputStream, char[] and more!
-List<Team> teams = Translator.getTranslator(Team.class).parseList(jsonString);
+List<Team> teams = Acela.getTranslator(Team.class).parseList(jsonString);
 
 // to serialize back to JSON
-String json = Translator.getTranslator(Team.class).serializeList(teams);
+String json = Acela.getTranslator(Team.class).serializeList(teams);
 
 ```
