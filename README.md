@@ -15,6 +15,7 @@ What sets this library apart:
 5. Support for subclassing non-Translatable classes and parsing data into them using `@InheritedField`
 
 ## Getting Started
+Will be up soon.
 
 ```groovy
   buildscript {
@@ -40,7 +41,7 @@ Add the library to the project-level build.gradle, and use the [apt plugin](http
   apply plugin: 'com.neenbedankt.android-apt'
 
   dependencies {
-    compile "com.andrewgrosner.acela:library:2.0.0"
+    compile "com.andrewgrosner.acela:library:1.0.0"
   }
 
 ```
