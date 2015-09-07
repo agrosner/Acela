@@ -1,10 +1,6 @@
 package com.andrewgrosner.acela.processor.definition;
 
 import com.andrewgrosner.acela.Acela;
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.core.JsonParser;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
 import com.andrewgrosner.acela.JsonGeneratorWrapper;
 import com.andrewgrosner.acela.JsonParserWrapper;
 import com.andrewgrosner.acela.annotation.InheritedField;
@@ -23,6 +19,10 @@ import com.andrewgrosner.acela.processor.ProcessorUtils;
 import com.andrewgrosner.acela.processor.definition.keys.KeyDefinition;
 import com.andrewgrosner.acela.processor.validation.KeyListenerValidator;
 import com.andrewgrosner.acela.processor.validation.KeyValidator;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Sets;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.CodeBlock;
 import com.squareup.javapoet.FieldSpec;
@@ -282,6 +282,7 @@ public class TranslatableDefinition extends BaseDefinition {
 
         int count = 0;
         CodeBlock.Builder codeBlockBuilder = CodeBlock.builder();
+        int foundCount = 0;
         for (KeyDefinition keyDefinition : keyDefinitions.values()) {
 
             // match up and see if the listener overrides generated key.
@@ -304,15 +305,17 @@ public class TranslatableDefinition extends BaseDefinition {
                 parseKeyListenerDefinitions.remove(keyListenerDefinition.keyName);
 
                 count++;
+                foundCount++;
             }
         }
 
         // write remaining if any left.
         for (KeyListenerDefinition keyListenerDefinition : parseKeyListenerDefinitions.values()) {
-            keyListenerDefinition.isFirst = false;
+            keyListenerDefinition.isFirst = (foundCount == 0);
             keyListenerDefinition.isLast = (count == size - 1);
             keyListenerDefinition.addCode(codeBlockBuilder);
             count++;
+            foundCount++;
         }
 
         codeBlockBuilder.endControlFlow();
