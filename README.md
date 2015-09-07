@@ -40,7 +40,7 @@ Add the library to the project-level build.gradle, and use the [apt plugin](http
   apply plugin: 'com.neenbedankt.android-apt'
 
   dependencies {
-    compile "com.andrewgrosner.acela:library:2.0.0"
+    compile "com.andrewgrosner.acela:library:1.0.0"
   }
 
 ```
