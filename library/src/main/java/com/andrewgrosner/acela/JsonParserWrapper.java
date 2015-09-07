@@ -1,7 +1,7 @@
 package com.andrewgrosner.acela;
 
-import com.fasterxml.jackson.core.JsonParser;
 import com.andrewgrosner.acela.processor.JSONMethodMap;
+import com.fasterxml.jackson.core.JsonParser;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -29,6 +29,13 @@ public class JsonParserWrapper {
      */
     public void setShouldThrowExceptions(boolean shouldThrowExceptions) {
         this.shouldThrowExceptions = shouldThrowExceptions;
+    }
+
+    /**
+     * @return The underlying {@link JsonParser} so we can access more complex methods.
+     */
+    public JsonParser getJsonParser() {
+        return jsonParser;
     }
 
     /**

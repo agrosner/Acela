@@ -94,6 +94,7 @@ public class MapKeyDefinition extends BaseKeyDefinition {
             KeyDefinition.emitAssignment(keyDefinition.variableName, "null", codeBlockBuilder);
         }
         codeBlockBuilder.endControlFlow();
+        codeBlockBuilder.endControlFlow();
     }
 
     @Override

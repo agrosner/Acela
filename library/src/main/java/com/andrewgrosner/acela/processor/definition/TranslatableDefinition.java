@@ -312,7 +312,7 @@ public class TranslatableDefinition extends BaseDefinition {
         // write remaining if any left.
         for (KeyListenerDefinition keyListenerDefinition : parseKeyListenerDefinitions.values()) {
             keyListenerDefinition.isFirst = (foundCount == 0);
-            keyListenerDefinition.isLast = (count == size - 1);
+            keyListenerDefinition.isLast = (foundCount == size - 1);
             keyListenerDefinition.addCode(codeBlockBuilder);
             count++;
             foundCount++;
