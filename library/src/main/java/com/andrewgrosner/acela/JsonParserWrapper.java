@@ -31,6 +31,10 @@ public class JsonParserWrapper {
         this.shouldThrowExceptions = shouldThrowExceptions;
     }
 
+    public JsonParser getJsonParser() {
+        return jsonParser;
+    }
+
     /**
      * @param returnType   The type to return.
      * @param defValue     The default value that we use if missing.
