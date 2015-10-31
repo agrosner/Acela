@@ -38,8 +38,8 @@ public class AcelaProcessor extends AbstractProcessor {
     @Override
     public Set<String> getSupportedAnnotationTypes() {
         Set<String> classes = new LinkedHashSet<>();
-        classes.add(Translatable.class.getName());
-        classes.add(TypeConverter.class.getName());
+        classes.add(Translatable.class.getCanonicalName());
+        classes.add(TypeConverter.class.getCanonicalName());
         return classes;
     }
 
