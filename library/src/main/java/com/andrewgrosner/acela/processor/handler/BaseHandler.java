@@ -41,7 +41,7 @@ public abstract class BaseHandler implements Handler {
         if (validator.validate(acelaProcessorManager, definition)) {
             try {
                 if (shouldWriteFile() && (!(definition instanceof TranslatableDefinition) ||
-                    ((TranslatableDefinition) definition).customHandlerMirror == null)) {
+                        ((TranslatableDefinition) definition).customHandlerMirror == null)) {
                     JavaFile javaFile = JavaFile.builder(acelaProcessorManager
                             .getElements().getPackageOf(element).toString(), definition.getTypeSpec()).build();
                     javaFile.writeTo(acelaProcessorManager.getFiler());
@@ -57,7 +57,7 @@ public abstract class BaseHandler implements Handler {
         return true;
     }
 
-    protected void onValidated(AcelaProcessorManager manager, BaseDefinition baseDefinition){
+    protected void onValidated(AcelaProcessorManager manager, BaseDefinition baseDefinition) {
 
     }
 

@@ -1,7 +1,7 @@
 package com.andrewgrosner.acela;
 
-import com.fasterxml.jackson.core.JsonParser;
 import com.andrewgrosner.acela.processor.JSONMethodMap;
+import com.fasterxml.jackson.core.JsonParser;
 
 import java.io.IOException;
 import java.math.BigDecimal;

@@ -1,8 +1,8 @@
 package com.andrewgrosner.acela.handler;
 
-import com.fasterxml.jackson.core.JsonParser;
 import com.andrewgrosner.acela.annotation.Key;
 import com.andrewgrosner.acela.annotation.Translatable;
+import com.fasterxml.jackson.core.JsonParser;
 
 import java.io.IOException;
 

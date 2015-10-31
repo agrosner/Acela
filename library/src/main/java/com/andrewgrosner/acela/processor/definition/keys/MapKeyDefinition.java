@@ -1,11 +1,11 @@
 package com.andrewgrosner.acela.processor.definition.keys;
 
 import com.andrewgrosner.acela.Acela;
-import com.fasterxml.jackson.core.JsonToken;
 import com.andrewgrosner.acela.annotation.Translatable;
-import com.andrewgrosner.acela.processor.JSONMethodMap;
 import com.andrewgrosner.acela.processor.AcelaProcessorManager;
+import com.andrewgrosner.acela.processor.JSONMethodMap;
 import com.andrewgrosner.acela.processor.definition.TranslatableDefinition;
+import com.fasterxml.jackson.core.JsonToken;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.CodeBlock;
 import com.squareup.javapoet.TypeName;

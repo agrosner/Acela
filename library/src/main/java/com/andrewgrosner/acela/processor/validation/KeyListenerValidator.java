@@ -23,7 +23,7 @@ public class KeyListenerValidator implements Validator<KeyListenerDefinition> {
 
         if (keyListenerDefinition.parameterList.size() > 1) {
             acelaProcessorManager.logError("The keylistener %1s can only have 0 or 1 parameters",
-                                   keyListenerDefinition.methodName);
+                    keyListenerDefinition.methodName);
             success = false;
         }
 

@@ -1,9 +1,9 @@
 package com.andrewgrosner.acela.test.parsers;
 
 import com.andrewgrosner.acela.Acela;
-import com.fasterxml.jackson.core.JsonGenerator;
 import com.andrewgrosner.acela.test.SimpleObject;
 import com.andrewgrosner.acela.test.TestingUtils;
+import com.fasterxml.jackson.core.JsonGenerator;
 
 import org.junit.Test;
 
@@ -11,7 +11,8 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * Description:

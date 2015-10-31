@@ -1,10 +1,10 @@
 package com.andrewgrosner.acela;
 
-import com.andrewgrosner.acela.processor.definition.ClassNames;
-import com.fasterxml.jackson.core.JsonFactory;
 import com.andrewgrosner.acela.annotation.Translatable;
 import com.andrewgrosner.acela.converter.CalendarConverter;
 import com.andrewgrosner.acela.handler.BaseTranslator;
+import com.andrewgrosner.acela.processor.definition.ClassNames;
+import com.fasterxml.jackson.core.JsonFactory;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -19,7 +19,7 @@ public class Acela {
     public static final JsonFactory JSON_FACTORY = new JsonFactory();
 
     private static Map<Class<?>, BaseTranslator> parseableMap = new HashMap<>();
-    private static Map<Class<?>, TypeConverter> typeConverterMap = new HashMap<Class<?>, TypeConverter>(){{
+    private static Map<Class<?>, TypeConverter> typeConverterMap = new HashMap<Class<?>, TypeConverter>() {{
         put(Calendar.class, new CalendarConverter());
     }};
 

@@ -30,7 +30,7 @@ public class TestDateConverter implements TypeConverter<Date, String> {
 
     @Override
     public void serialize(JsonGeneratorWrapper wrapper, String fieldName, Date value, String defValue) {
-        if(value != null) {
+        if (value != null) {
             wrapper.writeStringField(fieldName, DATE_FORMAT.format(value));
         } else {
             wrapper.writeStringField(fieldName, defValue);

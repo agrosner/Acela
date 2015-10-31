@@ -1,10 +1,10 @@
 package com.andrewgrosner.acela.test.custom;
 
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.core.JsonParser;
 import com.andrewgrosner.acela.JsonGeneratorWrapper;
 import com.andrewgrosner.acela.JsonParserWrapper;
 import com.andrewgrosner.acela.handler.BaseTranslator;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
 
 import java.io.IOException;
 

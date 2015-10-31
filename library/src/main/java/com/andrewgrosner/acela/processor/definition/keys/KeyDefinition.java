@@ -1,6 +1,5 @@
 package com.andrewgrosner.acela.processor.definition.keys;
 
-import com.fasterxml.jackson.core.JsonToken;
 import com.andrewgrosner.acela.TypeConverter;
 import com.andrewgrosner.acela.annotation.Key;
 import com.andrewgrosner.acela.annotation.Mergeable;
@@ -9,6 +8,7 @@ import com.andrewgrosner.acela.processor.AcelaProcessorManager;
 import com.andrewgrosner.acela.processor.ProcessorUtils;
 import com.andrewgrosner.acela.processor.definition.TranslatableDefinition;
 import com.andrewgrosner.acela.processor.writer.CodeBlockAdder;
+import com.fasterxml.jackson.core.JsonToken;
 import com.squareup.javapoet.CodeBlock;
 
 import java.util.Collection;

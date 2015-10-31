@@ -1,8 +1,6 @@
 package com.andrewgrosner.acela.processor;
 
 import com.andrewgrosner.acela.Acela;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import com.andrewgrosner.acela.processor.definition.ClassNames;
 import com.andrewgrosner.acela.processor.definition.TranslatableDefinition;
 import com.andrewgrosner.acela.processor.definition.TypeConverterDefinition;
@@ -14,6 +12,8 @@ import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -33,9 +33,9 @@ import javax.tools.Diagnostic;
  */
 public class AcelaProcessorManager implements Handler, TypeDefinition {
 
-    private List<Handler> handlers = Lists.newArrayList();
-    private Map<String, TranslatableDefinition> translatableDefinitionHashMap = Maps.newHashMap();
-    private Map<String, TypeConverterDefinition> typeConverterDefinitionMap = Maps.newHashMap();
+    private List<Handler> handlers = new ArrayList<>();
+    private Map<String, TranslatableDefinition> translatableDefinitionHashMap = new HashMap<>();
+    private Map<String, TypeConverterDefinition> typeConverterDefinitionMap = new HashMap<>();
 
     private final Elements elements;
     private final Types types;

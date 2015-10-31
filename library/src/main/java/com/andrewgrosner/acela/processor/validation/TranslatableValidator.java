@@ -17,8 +17,8 @@ public class TranslatableValidator implements Validator<TranslatableDefinition> 
 
         if (!translatableDefinition.inheritedFields.isEmpty()) {
             manager.logError("There are a few inherited fields remaining that do not correspond to fields or are not accessible" +
-                             " including: " +
-                             Arrays.toString(translatableDefinition.inheritedFields.keySet().toArray()));
+                    " including: " +
+                    Arrays.toString(translatableDefinition.inheritedFields.keySet().toArray()));
             success = false;
         }
 

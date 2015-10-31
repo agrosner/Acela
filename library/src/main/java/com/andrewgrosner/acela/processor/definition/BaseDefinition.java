@@ -1,6 +1,5 @@
 package com.andrewgrosner.acela.processor.definition;
 
-import com.google.common.collect.Sets;
 import com.andrewgrosner.acela.processor.AcelaProcessorManager;
 import com.andrewgrosner.acela.processor.writer.TypeDefinition;
 import com.squareup.javapoet.ClassName;
@@ -8,6 +7,7 @@ import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.lang.model.element.Modifier;
@@ -18,7 +18,10 @@ import javax.lang.model.element.TypeElement;
  */
 public abstract class BaseDefinition implements TypeDefinition {
 
-    public static final Set<Modifier> METHOD_MODIFIERS = Sets.newHashSet(Modifier.PUBLIC, Modifier.FINAL);
+    public static final Set<Modifier> METHOD_MODIFIERS = new HashSet<Modifier>() {{
+        add(Modifier.PUBLIC);
+        add(Modifier.FINAL);
+    }};
 
     private final AcelaProcessorManager manager;
 

@@ -1,8 +1,8 @@
 package com.andrewgrosner.acela.event;
 
-import com.fasterxml.jackson.core.JsonGenerator;
 import com.andrewgrosner.acela.JsonGeneratorWrapper;
 import com.andrewgrosner.acela.annotation.Key;
+import com.fasterxml.jackson.core.JsonGenerator;
 
 /**
  * Description: Enables a class to listen to serialization events and provide some custom logic during serialization. Please

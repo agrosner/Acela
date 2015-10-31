@@ -2,13 +2,13 @@ package com.andrewgrosner.acela.test.complex;
 
 import com.andrewgrosner.acela.JsonGeneratorWrapper;
 import com.andrewgrosner.acela.JsonParserWrapper;
-import com.andrewgrosner.acela.event.ParseListener;
-import com.andrewgrosner.acela.event.SerializeListener;
 import com.andrewgrosner.acela.annotation.InheritedField;
 import com.andrewgrosner.acela.annotation.Key;
 import com.andrewgrosner.acela.annotation.ParseKeyListener;
 import com.andrewgrosner.acela.annotation.SerializeKeyListener;
 import com.andrewgrosner.acela.annotation.Translatable;
+import com.andrewgrosner.acela.event.ParseListener;
+import com.andrewgrosner.acela.event.SerializeListener;
 import com.andrewgrosner.acela.test.SimpleObject;
 
 import java.util.List;

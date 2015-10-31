@@ -1,10 +1,6 @@
 package com.andrewgrosner.acela.processor.definition;
 
 import com.andrewgrosner.acela.Acela;
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.core.JsonParser;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
 import com.andrewgrosner.acela.JsonGeneratorWrapper;
 import com.andrewgrosner.acela.JsonParserWrapper;
 import com.andrewgrosner.acela.annotation.InheritedField;
@@ -23,6 +19,8 @@ import com.andrewgrosner.acela.processor.ProcessorUtils;
 import com.andrewgrosner.acela.processor.definition.keys.KeyDefinition;
 import com.andrewgrosner.acela.processor.validation.KeyListenerValidator;
 import com.andrewgrosner.acela.processor.validation.KeyValidator;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.CodeBlock;
 import com.squareup.javapoet.FieldSpec;
@@ -36,6 +34,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -77,13 +77,13 @@ public class TranslatableDefinition extends BaseDefinition {
     public boolean shouldThrowExceptions = false;
     public Translatable.KeyNameRule keyNameRule;
 
-    public Map<String, Key> inheritedFields = Maps.newLinkedHashMap();
+    public Map<String, Key> inheritedFields = new LinkedHashMap<>();
 
-    public Map<String, KeyDefinition> keyDefinitions = Maps.newLinkedHashMap();
-    public Map<String, KeyListenerDefinition> parseKeyListenerDefinitions = Maps.newLinkedHashMap();
-    public Map<String, KeyListenerDefinition> serializeKeyListenerDefinitions = Maps.newLinkedHashMap();
-    public Map<KeyDefinition, TypeName> customTypeConverters = Maps.newLinkedHashMap();
-    public Set<ClassName> referencedTranslators = Sets.newHashSet();
+    public Map<String, KeyDefinition> keyDefinitions = new LinkedHashMap<>();
+    public Map<String, KeyListenerDefinition> parseKeyListenerDefinitions = new LinkedHashMap<>();
+    public Map<String, KeyListenerDefinition> serializeKeyListenerDefinitions = new LinkedHashMap<>();
+    public Map<KeyDefinition, TypeName> customTypeConverters = new LinkedHashMap<>();
+    public Set<ClassName> referencedTranslators = new HashSet<>();
 
     public TranslatableDefinition(TypeElement typeElement, AcelaProcessorManager manager) {
         super(typeElement, manager);

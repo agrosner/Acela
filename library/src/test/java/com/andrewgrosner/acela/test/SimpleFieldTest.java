@@ -1,7 +1,7 @@
 package com.andrewgrosner.acela.test;
 
-import com.fasterxml.jackson.core.JsonGenerator;
 import com.andrewgrosner.acela.Acela;
+import com.fasterxml.jackson.core.JsonGenerator;
 
 import org.junit.Test;
 
@@ -10,7 +10,9 @@ import java.io.StringWriter;
 import java.text.ParseException;
 import java.util.Date;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Description:

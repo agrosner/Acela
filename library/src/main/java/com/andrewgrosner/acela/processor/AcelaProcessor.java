@@ -1,10 +1,10 @@
 package com.andrewgrosner.acela.processor;
 
-import com.google.auto.service.AutoService;
 import com.andrewgrosner.acela.annotation.Translatable;
 import com.andrewgrosner.acela.annotation.TypeConverter;
 import com.andrewgrosner.acela.processor.handler.TranslatableHandler;
 import com.andrewgrosner.acela.processor.handler.TypeConverterHandler;
+import com.google.auto.service.AutoService;
 
 import java.util.LinkedHashSet;
 import java.util.Set;

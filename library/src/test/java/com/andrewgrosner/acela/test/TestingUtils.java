@@ -15,7 +15,7 @@ import java.util.Map;
 public class TestingUtils {
 
     public static void writeTestArray(JsonGenerator jsonGenerator, String fieldName) throws IOException {
-        if(fieldName != null) {
+        if (fieldName != null) {
             jsonGenerator.writeFieldName(fieldName);
         }
         jsonGenerator.writeStartArray();

@@ -1,8 +1,8 @@
 package com.andrewgrosner.acela.test.complex;
 
-import com.fasterxml.jackson.core.JsonGenerator;
 import com.andrewgrosner.acela.Acela;
 import com.andrewgrosner.acela.test.TestingUtils;
+import com.fasterxml.jackson.core.JsonGenerator;
 
 import org.junit.Test;
 
